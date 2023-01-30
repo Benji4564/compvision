@@ -99,12 +99,17 @@ while True:
         threshold = 0.4
         loc_b = np.where(result_b >= threshold)
         loc_r = np.where(result_r >= threshold)
-        print(loc_r[0])
+        
+        
+        
+        print(loc_b[0])
         # If it is a match, draw a rectangle around the face and display the result
         if len(loc_b[0]) > 0:
+            print("Benjamin:" + str(loc_b[0]))
             cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
             cv2.putText(frame, "Benjamin", (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
         elif len(loc_r[0]) > 0:
+            print("Ronja:" + str(loc_r[0]))
             cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 255), 2)
             cv2.putText(frame, "Ronja", (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 255), 2)
     

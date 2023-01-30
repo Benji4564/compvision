@@ -2,10 +2,10 @@ import cv2
 import numpy as np
 
 # Load the haar cascade classifier for face detection
-face_cascade = cv2.CascadeClassifier('D:/Dokumente/Git/compvision/haarcascade.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade.xml')
 
 # Load the haar cascade classifier for eye detection
-eye_cascade = cv2.CascadeClassifier('D:/Dokumente/Git/compvision/haarcascade_eye.xml')
+eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
 # Start the webcam
 cap = cv2.VideoCapture(0)
